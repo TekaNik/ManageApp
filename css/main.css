@@ -269,15 +269,19 @@ body .page-footer #footer p {
     clear: both;
   }
   body nav ul #hamburguer-menu ul {
-    border: 2px solid red;
     height: 170px;
     width: 150px;
+    overflow: auto;
+    z-index: 4;
   }
   body nav ul #hamburguer-menu li {
     display: block;
     border: 1px black solid;
     font-size: 20px;
     width: 100vw;
+  }
+  body nav ul #hamburguer-menu li a:hover {
+    color: red;
   }
   body main > section .container {
     -webkit-box-orient: vertical;
@@ -328,6 +332,44 @@ body .page-footer #footer p {
   }
   body main #testemonials blockquote p {
     margin-top: 2em;
+  }
+  body .page-footer #simplify {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .page-footer #simplify .get-started {
+    background-color: #fff3e6;
+    color: #f25f3a;
+    margin-bottom: 2em;
+  }
+  body .page-footer #simplify p {
+    max-width: 15em;
+    font-size: 22px;
+  }
+  body .page-footer #footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    gap: 1em;
+        grid-template-areas: "search-box" "footer-nav" "social-media" "logo" "copyright";
+  }
+  body .page-footer #footer .logo {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: logo;
+    padding-top: 10%;
+    padding-left: 10%;
+  }
+  body .page-footer #footer .social-media {
+    max-width: 100vw;
+  }
+  body .page-footer #footer p {
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=main.css.map */
