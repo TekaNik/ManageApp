@@ -218,6 +218,9 @@ body{
                 a{
 
                     color: $text-color;
+                    &:hover{
+                        background-color: $primary-color;
+                    }
                 }
             }
             .search-box{

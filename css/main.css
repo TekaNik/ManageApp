@@ -246,6 +246,10 @@ body .page-footer #footer ul a {
   color: #fff3e6;
 }
 
+body .page-footer #footer ul a:hover {
+  background-color: #f25f3a;
+}
+
 body .page-footer #footer .search-box {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
