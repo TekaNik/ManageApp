@@ -222,20 +222,21 @@ body{
             }
             .search-box{
                 grid-area: search-box;
-                margin-top: 15px;;
-                
-                input{
-                    border-radius: 10px;
-                    padding: 0.55em 1em;
-                }
-                button{
-                    border-radius: 10px;
-                    padding: 0.55em 1em;
-                    margin-left: 15px;
-                    background-color: $primary-color;
-                    color: white;
-                    &:hover{
-                        background-color: hsla(12, 88%, 59%, 0.80);
+                margin-top: 15px;
+                form{
+                    input{
+                        border-radius: 10px;
+                        padding: 0.55em 1em;
+                    }
+                    button{
+                        border-radius: 10px;
+                        padding: 0.55em 1em;
+                        margin-left: 15px;
+                        background-color: $primary-color;
+                        color: white;
+                        &:hover{
+                            background-color: hsla(12, 88%, 59%, 0.80);
+                        }
                     }
                 }
                 
