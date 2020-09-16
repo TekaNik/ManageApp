@@ -49,16 +49,21 @@ body{
     nav{
         display: grid;
         grid-template-columns: auto auto 0.60fr;
+       
         a{
             color: $footer;
             font-weight: map-get($font-weight, grande);
             display: block;
             font-size: 1.2em;
-            
         }
+         .logo{
+             align-self: center;
+         }
 
         #get-started{
-            margin-right: 1em;
+           height: 43px;
+          align-self: center;
+            
         }
         ul{
             display: flex;
@@ -287,7 +292,6 @@ body{
                 display: none;
                 text-align: center;
                 padding: 0;
-                border: 2px solid ;
                 width: 85vw;
                 max-height: 0;
                 position: absolute;

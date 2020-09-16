@@ -68,8 +68,17 @@ body nav a {
   font-size: 1.2em;
 }
 
+body nav .logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 body nav #get-started {
-  margin-right: 1em;
+  height: 43px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 body nav ul {
@@ -304,7 +313,6 @@ body .page-footer #footer p {
     display: none;
     text-align: center;
     padding: 0;
-    border: 2px solid;
     width: 85vw;
     max-height: 0;
     position: absolute;
