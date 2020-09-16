@@ -312,49 +312,7 @@ body{
                     
                 }
 
-                // Hamburguer Menu
-                // #hamburguer-menu{
-                //     display: block;
-                //     font-size: 26px;
-                //     clear: both;
-                //     &:checked + ul#sub-menu{
-                //         display: block;
-                //     }
-
-                //     ul{
-
-                //         height: 170px;
-                //         width: 80vw;
-                //         height: 40vh;
-                //         overflow: auto;
-                //         z-index: 4;
-                //         position: absolute;
-                //         left: 2em;
-                //         background-color:white;
-                        
-                        
-                //     }
-                  
-                //     li{
-                //         display: flex;
-                //         justify-content: center;
-                //         align-items: center;
-                //         border: 1px black solid;
-                //         font-size: 20px;
-                //         width: 100vw;
-                //         & a{
-                //                 color: darkblue;
-                //                 font-weight: map-get($font-weight, bold);
-                        
-                //                 &:hover{
-                //                     color: red;
-                //                 }
-
-                //         }
-                      
-                //     }
-                    
-                // }
+           
             }
 
             // The .hamburguer-menu
