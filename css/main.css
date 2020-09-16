@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  color: #9F9FA9;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -28,7 +32,6 @@ body {
 }
 
 body .container {
-  border: solid 3px;
   max-width: 100%;
   height: auto;
   padding: 6vw;
@@ -57,6 +60,13 @@ body nav {
       grid-template-columns: auto auto 0.60fr;
 }
 
+body nav a {
+  color: #1d1e25;
+  font-weight: 700;
+  display: block;
+  font-size: 1.2em;
+}
+
 body nav #get-started {
   margin-right: 1em;
 }
@@ -71,12 +81,17 @@ body nav ul {
       flex-wrap: wrap;
 }
 
-body nav ul #hamburguer-menu {
+body nav .hamburguer-menu {
+  display: none;
+}
+
+body nav input#btn {
   display: none;
 }
 
 body main h4 {
   font-size: 20px;
+  max-width: 100vw;
 }
 
 body main h4 > span {
@@ -97,6 +112,7 @@ body main > section .container {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  overflow: hidden;
 }
 
 body main > section .container > div h1 {
@@ -108,7 +124,6 @@ body main > section .container > div h1 {
 body main > section .container > div p {
   max-width: 50vw;
   text-align: center;
-  color: inherit;
 }
 
 body main > section .container > div .get-started {
@@ -116,6 +131,7 @@ body main > section .container > div .get-started {
 }
 
 body main #manage {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,6 +150,10 @@ body main #manage > div p {
   width: 40vw;
 }
 
+body main #testemonials {
+  overflow: hidden;
+}
+
 body main #testemonials h3 {
   font-size: 2vw;
   font-weight: 700;
@@ -149,7 +169,6 @@ body main #testemonials > div {
 }
 
 body .page-footer {
-  background-color: #1d1e25;
   color: #fff3e6;
 }
 
@@ -172,11 +191,13 @@ body .page-footer #simplify .get-started {
   background-color: #fff3e6;
   color: #f25f3a;
   margin-bottom: 2em;
+  margin-right: 15%;
 }
 
 body .page-footer #simplify p {
   max-width: 12em;
   font-size: 30px;
+  color: white;
 }
 
 body .page-footer #footer {
@@ -219,6 +240,24 @@ body .page-footer #footer .search-box {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: search-box;
+  margin-top: 15px;
+}
+
+body .page-footer #footer .search-box input {
+  border-radius: 10px;
+  padding: 0.55em 1em;
+}
+
+body .page-footer #footer .search-box button {
+  border-radius: 10px;
+  padding: 0.55em 1em;
+  margin-left: 15px;
+  background-color: #f25f3a;
+  color: white;
+}
+
+body .page-footer #footer .search-box button:hover {
+  background-color: rgba(242, 95, 58, 0.8);
 }
 
 body .page-footer #footer .social-media {
@@ -260,28 +299,80 @@ body .page-footer #footer p {
   body nav #get-started {
     display: none;
   }
-  body nav ul li {
+  body nav ul.menu {
     display: none;
+    text-align: center;
+    padding: 0;
+    border: 2px solid;
+    width: 85vw;
+    max-height: 0;
+    position: absolute;
+    top: 10%;
+    background-color: rgba(255, 255, 255, 0.99);
+    -webkit-transition: max-height .2s ease-out;
+    transition: max-height .2s ease-out;
   }
-  body nav ul #hamburguer-menu {
+  body nav ul.menu li {
     display: block;
-    font-size: 26px;
+    width: 100%;
+    padding-top: 25px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  body nav ul.menu li:hover {
+    background-color: #fff3e6;
+  }
+  body nav .hamburguer-menu {
+    display: block;
+    position: relative;
+    right: -3.7em;
+    background-color: white;
+    -webkit-transition: background .2s ease-out;
+    transition: background .2s ease-out;
+    cursor: pointer;
     clear: both;
   }
-  body nav ul #hamburguer-menu ul {
-    height: 170px;
-    width: 150px;
-    overflow: auto;
-    z-index: 4;
-  }
-  body nav ul #hamburguer-menu li {
+  body nav .hamburguer-menu span {
     display: block;
-    border: 1px black solid;
-    font-size: 20px;
-    width: 100vw;
+    width: 20px;
+    height: 3px;
+    background: #000;
+    position: relative;
   }
-  body nav ul #hamburguer-menu li a:hover {
-    color: red;
+  body nav .hamburguer-menu span::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    top: -5px;
+  }
+  body nav .hamburguer-menu span::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    top: 5px;
+  }
+  body nav input#btn:checked ~ ul.menu {
+    display: block;
+    max-height: 40vh;
+  }
+  body nav input#btn:checked ~ .hamburguer-menu span {
+    background: transparent;
+  }
+  body nav input#btn:checked ~ .hamburguer-menu span::after {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 0;
+  }
+  body nav input#btn:checked ~ .hamburguer-menu span::before {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 0;
   }
   body main > section .container {
     -webkit-box-orient: vertical;
@@ -299,6 +390,7 @@ body .page-footer #footer p {
     margin: 0 auto;
   }
   body main #manage {
+    overflow: hidden;
     display: block;
   }
   body main #manage > div h2 {
@@ -309,6 +401,9 @@ body .page-footer #footer p {
   }
   body main #manage > div > div h4 {
     background-color: #ffefeb;
+  }
+  body main #testemonials {
+    overflow: hidden;
   }
   body main #testemonials .disappear {
     display: none;
@@ -343,12 +438,14 @@ body .page-footer #footer p {
     background-color: #fff3e6;
     color: #f25f3a;
     margin-bottom: 2em;
+    margin: 0 auto;
   }
   body .page-footer #simplify p {
     max-width: 15em;
     font-size: 22px;
   }
   body .page-footer #footer {
+    overflow: hidden;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;
