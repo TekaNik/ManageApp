@@ -51,6 +51,7 @@ body .get-started {
   color: #fff3e6;
   margin: 0 auto;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 body nav {
